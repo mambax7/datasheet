@@ -1,0 +1,21 @@
+<h2 align="center"><{$data_header}></h2>
+
+<p><{$data_intro}></p>
+
+<br /><br />
+
+<table class="outer">
+
+<{foreach item=vypis from=$vypis}>
+<tr class="<{cycle values='even,odd'}>">
+<td valign="top"><a href="download.php?req=<{$vypis.request}>" title="<{$vypis.title}>"><{$vypis.name}></a></td>
+<td><{$vypis.desc}></td>
+<td align="right"><{$vypis.extension}></td>
+<td align="right"><{$vypis.size}> <{$vypis.units}></td>
+</tr>
+<{/foreach}>
+</table>
+
+<br />
+<p><{$data_footer}></p>
+<p align="right"><{$data_a_footer}></p>
